@@ -53,10 +53,15 @@ mat-card button {
   cursor: pointer;
 }
 
-.profile-pic,
-.logo {
+.profile-pic {
   width: 150px;
   height: auto;
+  margin: 0 auto 1rem auto;
+}
+
+.logo {
+  width: auto;
+  height: 17%;
   margin: 0 auto 1rem auto;
 }
 
