@@ -25,12 +25,16 @@ export class AuthComponent implements OnInit {
     const body = new HttpParams().set('code', code).set('ascii', ascii);
 
     return this.httpClient
-      .post('http://localhost:3000/sendcode', body.toString(), {
-        headers: new HttpHeaders().set(
-          'Content-Type',
-          'application/x-www-form-urlencoded'
-        ),
-      })
+      .post(
+        'https://murmuring-headland-03058.herokuapp.com/sendcode',
+        body.toString(),
+        {
+          headers: new HttpHeaders().set(
+            'Content-Type',
+            'application/x-www-form-urlencoded'
+          ),
+        }
+      )
       .subscribe((res) => {
         if (res) {
           this.authenticatorService.authenticated = true;
