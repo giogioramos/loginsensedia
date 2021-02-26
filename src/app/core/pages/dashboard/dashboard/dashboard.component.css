@@ -73,3 +73,18 @@ h3,
 h2 {
   text-align: center;
 }
+
+@media only screen and (max-width: 850px) {
+  .half-l,
+  .half-r {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100%;
+    position: unset;
+  }
+  .dashboard-wrapper {
+    overflow: auto;
+  }
+}
