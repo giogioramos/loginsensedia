@@ -1,0 +1,30 @@
+<mat-card>
+    <h3>
+        Escaneie o QRCode pelo Google Authenticator!
+    </h3>
+    <img [src]="qrcode">
+
+    <mat-form-field appearance="fill">
+        <mat-label>Código gerado</mat-label>
+        <input
+            #code
+            matInput
+            type="number"
+            maxlength="6"
+        >
+        <span
+            mat-icon-button
+            matSuffix
+        >
+            <mat-icon>lock</mat-icon>
+        </span>
+    </mat-form-field>
+    <button
+        (click)="sendCode(code.value, ascii)"
+        mat-raised-button
+        color="primary"
+        type="submit"
+    >
+        Autenticar
+    </button>
+</mat-card>

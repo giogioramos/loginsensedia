@@ -1,0 +1,59 @@
+mat-card {
+  width: 30%;
+  padding: 2rem 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 0 auto;
+}
+
+mat-tab-group {
+  margin-top: 2rem;
+}
+
+::ng-deep.mat-tab-label,
+::ng-deep.mat-tab-label-active {
+  width: 50%;
+}
+
+.logo {
+  width: 65%;
+  margin: auto;
+}
+
+.login-wrapper {
+  padding-top: 1rem;
+}
+
+app-login-entrar,
+app-login-cadastro {
+  margin-top: 1rem;
+}
+
+.wrapper {
+  height: calc(100vh - 5rem);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 5rem;
+  background-image: url("../../../../assets/background.png");
+}
+
+@media only screen and (max-width: 1200px) {
+  mat-card {
+    width: 50%;
+    padding: 2rem 0 2rem 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 0 auto;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  mat-card {
+    width: 80%;
+    padding: 2rem 0 2rem 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 0 auto;
+  }
+}

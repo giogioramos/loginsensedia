@@ -1,0 +1,47 @@
+<form
+    [formGroup]="loginFrom"
+    (ngSubmit)="onSubmit()"
+    novalidate
+>
+    <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input
+            matInput
+            formControlName="email"
+        >
+        <span
+            mat-icon-button
+            matSuffix
+        >
+            <mat-icon>email</mat-icon>
+        </span>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Senha</mat-label>
+        <input
+            matInput
+            formControlName="password"
+            [type]="hide ? 'password' : 'text'"
+        >
+        <span
+            mat-icon-button
+            matSuffix
+            (click)="hide = !hide"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide"
+        >
+            <mat-icon>
+                {{hide ? 'visibility_off' : 'visibility'}}
+            </mat-icon>
+        </span>
+    </mat-form-field>
+
+    <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+    >
+        Entrar
+    </button>
+</form>

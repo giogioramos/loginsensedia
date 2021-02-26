@@ -1,0 +1,26 @@
+<div class="wrapper">
+    <mat-card>
+        <img
+            class="logo"
+            src="assets/logo.svg"
+        >
+        <mat-tab-group [(selectedIndex)]="selectedTab">
+            <mat-tab
+                label="Entre"
+                (click)="changeSelectedIndex(1)"
+            >
+                <div class="login-wrapper">
+                    <app-login-existing></app-login-existing>
+                </div>
+            </mat-tab>
+            <mat-tab
+                label="Cadastre-se!"
+                (click)="changeSelectedIndex(2)"
+            >
+                <div class="login-wrapper">
+                    <app-login-new (selectedIndexEmitter)="changeSelectedIndex($event)"></app-login-new>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-card>
+</div>

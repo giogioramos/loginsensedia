@@ -1,0 +1,62 @@
+<!-- <p>
+    Seja bem-vindo(a), {{displayInfo.name}}!
+</p>
+
+<p>{{displayInfo.email}}</p>
+
+<p>https://github.com/tokengi</p>
+
+<p>
+    Web Application desenvolvida com Angular 11
+</p> -->
+
+<div class="dashboard-wrapper">
+    <div class="half-l">
+        <mat-card>
+            <img
+                src="assets/profile.jpg"
+                class="profile-pic"
+            >
+            <mat-spinner *ngIf="!displayInfo.name"></mat-spinner>
+            <h2 *ngIf="displayInfo.name">Bem-vindo(a), {{displayInfo.name}}!</h2>
+            <h3>{{displayInfo.email}}</h3>
+            <button
+                (click)="logout()"
+                mat-raised-button
+                color="warn"
+            >
+                Deslogar
+            </button>
+        </mat-card>
+    </div>
+    <div class="half-r">
+        <mat-card>
+            <img
+                src="assets/githublogo.png"
+                class="logo"
+            >
+            <h2>Confira o código fonte no GitHub!</h2>
+            <h2>
+                <a
+                    href="https://github.com"
+                    target="blank_"
+                >
+                    Front End
+                </a>
+            </h2>
+            <h2>
+                <a
+                    href="https://github.com"
+                    target="blank_"
+                >
+                    Back End
+                </a>
+            </h2>
+            <img
+                src="assets/angularlogo.png"
+                class="logo"
+            >
+            <h3>Desenvolvido com Angular 11</h3>
+        </mat-card>
+    </div>
+</div>

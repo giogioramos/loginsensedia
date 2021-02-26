@@ -1,0 +1,11 @@
+mat-form-field,
+button {
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+  display: block;
+}
+
+span {
+  cursor: pointer;
+}

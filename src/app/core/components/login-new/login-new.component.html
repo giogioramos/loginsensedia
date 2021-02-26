@@ -1,0 +1,80 @@
+<form
+    [formGroup]="registrationForm"
+    (ngSubmit)="onSubmit()"
+    novalidate
+>
+    <mat-form-field appearance="fill">
+        <mat-label>Qual seu nome?</mat-label>
+        <input
+            formControlName="name"
+            matInput
+        >
+        <span
+            mat-icon-button
+            matSuffix
+        >
+            <mat-icon>face</mat-icon>
+        </span>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Nos informe seu email</mat-label>
+        <input
+            formControlName="email"
+            matInput
+        >
+        <span
+            mat-icon-button
+            matSuffix
+        >
+            <mat-icon>email</mat-icon>
+        </span>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Crie sua senha</mat-label>
+        <input
+            formControlName="password"
+            matInput
+            [type]="hide ? 'password' : 'text'"
+        >
+        <span
+            mat-icon-button
+            matSuffix
+            (click)="hide = !hide"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide"
+        >
+            <mat-icon>
+                {{hide ? 'visibility_off' : 'visibility'}}
+            </mat-icon>
+        </span>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Repita a sua senha!</mat-label>
+        <input
+            formControlName="passwordConfirmation"
+            matInput
+            [type]="hide ? 'password' : 'text'"
+        >
+        <span
+            mat-icon-button
+            matSuffix
+            (click)="hide = !hide"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide"
+        >
+            <mat-icon>
+                {{hide ? 'visibility_off' : 'visibility'}}
+            </mat-icon>
+        </span>
+    </mat-form-field>
+
+    <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+    >
+        Cadastrar
+    </button>
+</form>
